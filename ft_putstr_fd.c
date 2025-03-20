@@ -6,19 +6,14 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 14:14:07 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/16 21:09:49 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:36:56 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Parameters
-// s: The string to output.
-// fd: The file descriptor on which to write.
-
-// Description
-// Outputs the string ’s’ to the specified file descriptor.
-
 #include "libft.h"
 
+// Parameters: s: The string to output. fd: file descriptor on which to write.
+// Description: Outputs the string ’s’ to the specified file descriptor.
 void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	s_len;

@@ -6,26 +6,21 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 13:07:17 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/15 16:44:03 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:46:07 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Parameters
-// s : The string to iterate over.
-// f : The function to apply to each character
+#include "libft.h"
 
-// Return value
+// Parameters: s : string to iterate over. f : fn to apply to each character
+// Return value:
 // The string created from the successive applications of ’f’.Returns NULL if
 // the allocation fails.
-
-// Description
+// Description:
 // Applies the function f to each character of the string s, passing its index
 // as the first argument and the character itself as the second.A new string is
 // created(using malloc(3)) to store the results from the successive
 // applications of f.
-
-#include "libft.h"
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*result;

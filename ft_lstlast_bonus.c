@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 13:25:52 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/20 18:23:03 by djanardh         ###   ########.fr       */
+/*   Created: 2025/03/20 12:40:38 by djanardh          #+#    #+#             */
+/*   Updated: 2025/03/20 18:27:54 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//  The isdigit() function tests for a decimal digit character.
-int	ft_isdigit(int c)
+// Parameters: lst:  The beginning of the list.
+// Return value: Last node of the list
+// Description: Returns the last node of the list.
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 48 && c <= 57)
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		return (1);
+		lst = lst->next;
 	}
-	return (0);
+	return (lst);
 }
-
-// int main(void)
-// {
-// 	int output_yours = ft_isdigit(']');
-// 	printf("your output: %i\n", output_yours);
-//  int output_comp = isdigit(']');
-//  printf("in-built function output: %i\n", output_comp);
-// 	return(0);
-// }

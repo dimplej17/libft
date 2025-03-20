@@ -6,17 +6,17 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:43:05 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/13 15:12:55 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 17:06:16 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The atoi() function converts the initial portion of the string pointed to by
-// str to int representation.
-// atoi stands for ASCII To Integer. The atoi() is a library function in C that
-// converts the numbers in string form to their integer value.
-
+// In ASCII, whitespace characters are space ( ' ' ), tab ( '\t' ),
+// carriage return ( '\r' ), newline ( '\n' ),
+// vertical tab ( '\v' ) and formfeed ( '\f' ).
 #include "libft.h"
 
+// The atoi() function converts the initial portion of the string pointed to by
+// str to from ASCII to int representation.
 int	ft_atoi(const char *str)
 {
 	int	i;

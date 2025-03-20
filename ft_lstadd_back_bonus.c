@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/15 15:06:00 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/18 19:25:02 by djanardh         ###   ########.fr       */
+/*   Created: 2025/03/20 12:41:49 by djanardh          #+#    #+#             */
+/*   Updated: 2025/03/20 18:25:46 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Outputs the integer ’n’ to the specified file descriptor.
-void	ft_putnbr_fd(int n, int fd)
+// Parameters:
+// lst:  The address of a pointer to the first node of a list.
+// new:  The address of a pointer to the node to be added.
+// Description: Adds the node ’new’ at the end of the list.
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	c;
+	t_list	*current;
 
-	if (n == -2147483648)
+	if (new == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		write(fd, "-2147483648", 11);
+		*lst = new;
 		return ;
 	}
-	if (n < 0)
+	current = *lst;
+	while (current->next != NULL)
 	{
-		write(fd, "-", 1);
-		n = -n;
+		current = current->next;
 	}
-	if (n < 10 && n >= 0)
-	{
-		c = '0' + n;
-		write(fd, &c, 1);
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		c = '0' + (n % 10);
-		write(fd, &c, 1);
-	}
+	current->next = new;
 }
-
-// int	main(void)
-// {
-// 	int n = 12345;
-// 	ft_putnbr_fd(n, 1);
-// 	return (0);
-// }

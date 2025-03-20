@@ -6,20 +6,16 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/15 15:02:23 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/16 21:35:01 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:36:00 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Parameters
-// s: The string to output.
-// fd: The file descriptor on which to write.
-
-// Description
-// Outputs the string ’s’ to the specified file descriptor followed by a
-// newline.
-
 #include "libft.h"
 
+// Parameters: s: The string to output. fd: file descriptor on which to write.
+// Description:
+// Outputs the string ’s’ to the specified file descriptor followed by a
+// newline.
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	s_len;

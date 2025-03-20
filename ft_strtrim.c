@@ -6,23 +6,19 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 17:47:43 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/14 18:22:51 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 16:55:14 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // Parameters
 // s1: The string to be trimmed.
 // set: The string containing the set of characters to be removed.
-
-// Return value
-// The trimmed string
-
-// Description
+// Return value: The trimmed string
+// Description:
 // Allocates memory (using malloc(3)) and returns a copy of ’s1’ with characters
 // from ’set’ removed from the beginning and the end.
-
-#include "libft.h"
-
 static int	in_set_or_not(char c, char const *set)
 {
 	int	i;
@@ -65,7 +61,7 @@ static size_t	ft_end_index(char const *s1, char const *set, size_t s1_len,
 	size_t	i;
 
 	i = s1_len - 1;
-	if (s1_len == 0 || start_index >= s1_len)
+	if (start_index >= s1_len)
 		return (start_index);
 	while (i > start_index)
 	{
@@ -87,7 +83,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	s1_len;
 
 	s1_len = ft_strlen(s1);
-	if (s1 == NULL && set == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	if (s1_len == 0)
 		return (ft_strdup(""));

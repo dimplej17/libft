@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 13:25:52 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/20 18:23:03 by djanardh         ###   ########.fr       */
+/*   Created: 2025/03/20 12:45:06 by djanardh          #+#    #+#             */
+/*   Updated: 2025/03/20 18:27:23 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Parameters:
+// lst: The address of a pointer to a node.
+// f: The address of the function to apply to each node’s content.
+// Description: Iterates through the list ’lst’ and applies the function ’f’
+// to the content of each node.
 #include "libft.h"
 
-//  The isdigit() function tests for a decimal digit character.
-int	ft_isdigit(int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= 48 && c <= 57)
+	while (lst != NULL)
 	{
-		return (1);
+		f(lst->content);
+		lst = lst->next;
 	}
-	return (0);
 }
-
-// int main(void)
-// {
-// 	int output_yours = ft_isdigit(']');
-// 	printf("your output: %i\n", output_yours);
-//  int output_comp = isdigit(']');
-//  printf("in-built function output: %i\n", output_comp);
-// 	return(0);
-// }

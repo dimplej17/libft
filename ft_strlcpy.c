@@ -6,29 +6,19 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:48:34 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/14 18:57:27 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:44:18 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The strlcpy() and strlcat() functions copy and concatenate strings
-// with the same input parameters and output result as snprintf(3).
-// They are designed to be safer, more consistent, and less error prone
-// replacements for the easily misused functions strncpy(3) and
-// strncat(3).
-
-// strlcpy() and strlcat() take the full size of the destination buffer
-// and guarantee NUL-termination if there is room.  Note that room for
-// the NUL should be included in dstsize.
-
-// strlcpy() copies up to dstsize - 1 characters from the string src to
-// dst, NUL-terminating the result if dstsize is not 0.
-
-// the strlcpy() and strlcat() functions return the
-//      total length of the string they tried to create.  For strlcpy() that
-//      means the length of src.
-
 #include "libft.h"
 
+// strlcpy() take the full size of the destination buffer
+// and guarantee NUL-termination if there is room.  Note that room for
+// the NUL should be included in dstsize.
+// strlcpy() copies up to dstsize - 1 characters from the string src to
+// dst, NUL-terminating the result if dstsize is not 0.
+// the strlcpy() return the total length of the string they tried to create.
+// For strlcpy() that means the length of src.
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

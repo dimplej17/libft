@@ -6,12 +6,14 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 13:09:17 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/11 12:57:08 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:22:02 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//  The isalpha() function tests for any character for which isupper or
+// islower is true.
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

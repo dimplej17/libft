@@ -6,9 +6,11 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:31:19 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/13 14:36:33 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:47:20 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // The strnstr() function locates the first occurrence of the null-termi-nated
 // string needle in the string haystack, where not more than len characters are
@@ -16,9 +18,6 @@
 // RETURN VALUES: If needle is an empty string, haystack is returned; if needle
 // occurs nowhere in haystack, NULL is returned; otherwise a pointer to the
 // first character of the first occurrence of needle is returned.
-
-#include "libft.h"
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

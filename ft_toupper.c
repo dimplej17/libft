@@ -6,12 +6,14 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 19:29:08 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/11 19:37:42 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:48:52 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// The toupper() function converts a lower-case letter to the corresponding
+// upper-case letter.
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

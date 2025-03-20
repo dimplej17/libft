@@ -1,7 +1,7 @@
 # Define Program name
 NAME = libft.a
 
-# Define Source files
+# Define mandatory Source files
 SRCS =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -36,19 +36,21 @@ SRCS =	ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c 
 
-
-
-
-
-		
-
-
-
+BONUS = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
 
 # Define Object files
 OBJS = $(SRCS:%.c=%.o)
+BONUS_OBJS = $(BONUS:%.c=%.o)
 
 # Define the Compiler
 CC = cc
@@ -66,17 +68,20 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
+bonus: $(BONUS_OBJS)
+		$(AR) $(NAME) $(BONUS_OBJS)
+
 # Rule to compile .c files into .o files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rule to remove object files
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 # Rule to remove object files and the program
 fclean: clean
 	rm -f $(NAME)
 
 # 're' rule to rebuild the program
-re: fclean all
+re: clean fclean all re

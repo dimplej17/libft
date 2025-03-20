@@ -6,12 +6,14 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:19:14 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/11 15:58:27 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 17:26:04 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// The bzero() function writes n zeroed bytes to the string s.  If n is
+// zero, bzero() does nothing.
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*s2;
@@ -28,13 +30,14 @@ void	ft_bzero(void *s, size_t n)
 
 // int	main(void)
 // {
-// 	char m[10] = "Hello";
+// 	char	m[10] = "Hello";
+// 	char	b[10] = "Hello";
+
 // 	printf("%s\n", m);
 // 	ft_bzero(m, 3);
 // 	printf("your output: %s\n", m);
-// 	char b[10] = "Hello";
-// 	printf("%s\n", b);
 // 	bzero(b, 3);
 // 	printf("in-built function output: %s\n", b);
+// 	printf("%s\n", b);
 // 	return (0);
 // }

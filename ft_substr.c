@@ -6,19 +6,17 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 16:28:11 by djanardh          #+#    #+#             */
-/*   Updated: 2025/03/14 18:22:26 by djanardh         ###   ########.fr       */
+/*   Updated: 2025/03/20 18:47:36 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 // s: The original string from which to create the substring.
 // start: The starting index of the substring within ’s’.
 // len: The maximum length of the substring.
-
 // Allocates memory (using malloc(3)) and returns a substring from the string
-// ’s’. The substring starts at index ’start’ and has a maximum length of ’len’.
-
-#include "libft.h"
-
+// ’s’. The substring starts at index ’start’ and has a maximum length of ’len’
 static size_t	ft_malloc_size(size_t s_len, size_t start, size_t len)
 {
 	size_t	remaining_len;
